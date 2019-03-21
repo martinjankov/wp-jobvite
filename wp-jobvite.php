@@ -9,9 +9,9 @@
  *
  *
  * You should have received a copy of the GNU General Public License
- * along with GLG Jobvite. If not, see <http://www.gnu.org/licenses/>.
+ * along with WP Jobvite. If not, see <http://www.gnu.org/licenses/>.
  *
- * @package    GLGJobvite
+ * @package    WPJobvite
  * @author     Martin Jankov
  * @since      0.0.1
  * @license    GPL-3.0+
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-final class GLGJobvite {
+final class WPJobvite {
 
 	private static $_instance;
 
@@ -33,9 +33,9 @@ final class GLGJobvite {
 
 	public static function instance() {
 
-		if ( ! isset( self::$_instance ) && ! ( self::$_instance instanceof GLGJobvite ) ) {
+		if ( ! isset( self::$_instance ) && ! ( self::$_instance instanceof WPJobvite ) ) {
 
-			self::$_instance = new GLGJobvite;
+			self::$_instance = new WPJobvite;
 			self::$_instance->constants();
 			self::$_instance->includes();
 
@@ -91,6 +91,6 @@ final class GLGJobvite {
  * Use this function as global in all other classes and/or files. 
  */
 function jv() {
-	return GLGJobvite::instance();
+	return WPJobvite::instance();
 }
 jv();
